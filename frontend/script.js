@@ -1,6 +1,15 @@
 async function prever() {
     // Pega os valores do formulário
     const form = document.getElementById('formulario')
+// Esconde o resultado anterior, atualiza e mostra novamente
+const resultado = document.getElementById('resultado')
+resultado.classList.add('escondido')
+
+setTimeout(() => {
+    document.getElementById('faixa').textContent = `${classe} — ${faixas[classe]}`
+    resultado.classList.remove('escondido')
+    resultado.scrollIntoView({ behavior: 'smooth' })
+}, 100)
 
     const dados = {
         idade: parseInt(form.idade.value),
