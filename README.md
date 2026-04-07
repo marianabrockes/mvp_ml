@@ -39,21 +39,23 @@ O modelo vencedor foi a **Árvore de Classificação** com 68,1% de acurácia no
 
 ## Estrutura do projeto
 
+```
 mvp_ml/
 ├── backend/
-│ ├── app.py # API Flask
-│ ├── modelo.pkl # Modelo treinado
-│ ├── requirements.txt # Dependências
-│ └── tests/
-│ └── test_modelo.py # Teste PyTest (acurácia e F1-score ≥ 60%)
+│   ├── app.py              # API Flask
+│   ├── modelo.pkl          # Modelo treinado
+│   ├── requirements.txt    # Dependências
+│   └── tests/
+│       └── test_modelo.py  # Teste PyTest (acurácia e F1-score ≥ 60%)
 ├── frontend/
-│ ├── index.html
-│ ├── style.css
-│ └── script.js
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
 ├── notebook/
-│ ├── kaggle_survey_2022_responses.csv
-│ └── ml_kaggle_survey_2022.ipynb
+│   ├── kaggle_survey_2022_responses.csv
+│   └── ml_kaggle_survey_2022.ipynb
 └── README.md
+```
 
 ## Como executar
 
