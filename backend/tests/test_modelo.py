@@ -3,9 +3,11 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, f1_score
 
-# Threshold mínimo de acurácia exigido
-THRESHOLD = 0.60
+# Thresholds mínimos de desempenho
+THRESHOLD_ACURACIA = 0.60
+THRESHOLD_F1 = 0.60
 
 def test_modelo_acuracia():
     """Verifica se o modelo atinge acurácia mínima de 60% no conjunto de teste."""
@@ -128,8 +130,14 @@ def test_modelo_acuracia():
     # Avalia
     y_pred = modelo.predict(X_test)
     acuracia = accuracy_score(y_test, y_pred)
+    f1 = f1_score(y_test, y_pred, average='weighted')
 
     print(f"Acurácia no teste: {acuracia:.4f}")
-    print(f"Threshold mínimo: {THRESHOLD}")
+    print(f"F1-score no teste: {f1:.4f}")
+    print(f"Threshold acurácia: {THRESHOLD_ACURACIA}")
+    print(f"Threshold F1-score: {THRESHOLD_F1}")
 
-    assert acuracia >= THRESHOLD, f"Acurácia {acuracia:.4f} abaixo do threshold {THRESHOLD}"
+    assert acuracia >= THRESHOLD_ACURACIA, \
+        f"Acurácia {acuracia:.4f} abaixo do threshold {THRESHOLD_ACURACIA}"
+    assert f1 >= THRESHOLD_F1, \
+        f"F1-score {f1:.4f} abaixo do threshold {THRESHOLD_F1}"
