@@ -6,68 +6,79 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+    background-color: #0a0e1a;
+    color: #e2e8f0;
     padding: 2rem;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto;
-    background: white;
+    background: #1e293b;
     border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 2.5rem;
+    border: 1px solid #1e3a5f;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.08);
 }
 
 h1 {
     font-size: 1.8rem;
-    color: #2d3748;
-    margin-bottom: 0.5rem;
+    color: #60a5fa;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.02em;
 }
 
 .subtitulo {
-    color: #718096;
+    color: #64748b;
     margin-bottom: 2rem;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .secao {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1.8rem;
+    padding-bottom: 1.8rem;
+    border-bottom: 1px solid #1e293b;
 }
 
 .secao h2 {
-    font-size: 1rem;
-    color: #4a5568;
+    font-size: 0.75rem;
+    color: #3b82f6;
     margin-bottom: 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
 }
 
 label {
     display: block;
-    font-size: 0.9rem;
-    color: #4a5568;
+    font-size: 0.85rem;
+    color: #94a3b8;
     margin-bottom: 0.3rem;
     margin-top: 0.8rem;
 }
 
 select {
     width: 100%;
-    padding: 0.6rem;
-    border: 1px solid #cbd5e0;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid #1e3a5f;
     border-radius: 8px;
     font-size: 0.9rem;
-    color: #2d3748;
-    background: white;
+    color: #e2e8f0;
+    background: #0f172a;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .checkboxes {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
 }
 
 .checkboxes label {
@@ -75,54 +86,84 @@ select {
     align-items: center;
     gap: 0.5rem;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
+    color: #94a3b8;
     cursor: pointer;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #1e293b;
+    transition: all 0.2s;
+}
+
+.checkboxes label:hover {
+    border-color: #3b82f6;
+    color: #e2e8f0;
+    background: #0f172a;
+}
+
+.checkboxes input[type="checkbox"] {
+    accent-color: #3b82f6;
+    width: 14px;
+    height: 14px;
 }
 
 button {
     width: 100%;
     padding: 1rem;
-    background: #4299e1;
+    background: linear-gradient(135deg, #1d4ed8, #3b82f6);
     color: white;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 1rem;
-    transition: background 0.2s;
+    margin-top: 1.5rem;
+    transition: all 0.2s;
+    letter-spacing: 0.02em;
 }
 
 button:hover {
-    background: #3182ce;
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
 }
 
 .resultado {
     margin-top: 2rem;
-    padding: 1.5rem;
-    background: #ebf8ff;
+    padding: 1.8rem;
+    background: #0f172a;
     border-radius: 12px;
     text-align: center;
+    border: 1px solid #1e3a5f;
 }
 
 .resultado h2 {
-    color: #2b6cb0;
+    color: #60a5fa;
     margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .resultado p {
-    color: #4a5568;
-    margin-bottom: 1rem;
+    color: #64748b;
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
 }
 
 .faixa {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    color: #2b6cb0;
-    padding: 1rem;
-    background: white;
+    color: #60a5fa;
+    padding: 1.2rem;
+    background: #0a0e1a;
     border-radius: 10px;
-    border: 2px solid #bee3f8;
+    border: 1px solid #1e3a5f;
+    text-shadow: 0 0 20px rgba(96, 165, 250, 0.4);
 }
 
 .escondido {
