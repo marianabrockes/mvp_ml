@@ -75,6 +75,10 @@ A API ficará disponível em `http://127.0.0.1:5001`
 
 Abra o arquivo `frontend/index.html` diretamente no navegador.
 
+```bash
+open -a "Google Chrome" frontend/index.html
+```
+
 ### Testes
 
 ```bash
@@ -92,4 +96,4 @@ O teste verifica dois thresholds mínimos de desempenho:
 
 O notebook completo pode ser executado diretamente no Google Colab:
 
-[Abrir no Google Colab](https://colab.research.google.com/drive/1bnkEAvfBIKebTpPcRX02qxdWVCu3CYT1)
+[Abrir no Google Colab](https://colab.research.google.com/drive/1bnkEAvfBIKebTpPcRX02qxdWVCu3CYT1?usp=sharing)
