@@ -90,8 +90,6 @@ O teste verifica dois thresholds mínimos de desempenho:
 
 ## Notebook
 
-## Notebook
-
 O notebook completo pode ser executado diretamente no Google Colab:
 
 [Abrir no Google Colab](https://colab.research.google.com/drive/1bnkEAvfBIKebTpPcRX02qxdWVCu3CYT1)
