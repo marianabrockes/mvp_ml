@@ -90,8 +90,8 @@ O teste verifica dois thresholds mínimos de desempenho:
 
 ## Notebook
 
-O notebook completo está disponível em `notebook/ml_kaggle_survey_2022.ipynb` e pode ser executado diretamente no Google Colab.
+## Notebook
 
-## Vídeo
+O notebook completo pode ser executado diretamente no Google Colab:
 
-[Link do vídeo — em breve]
+[Abrir no Google Colab](https://colab.research.google.com/drive/1bnkEAvfBIKebTpPcRX02qxdWVCu3CYT1)
