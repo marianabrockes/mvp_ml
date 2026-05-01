@@ -1,4 +1,4 @@
-# Salary Prediction — Tech Professionals 💻
+# Salary Prediction — Tech Professionals
 
 A machine learning project that predicts which salary bracket a tech professional falls into, based on their profile, experience, programming languages, and learning background.
 
