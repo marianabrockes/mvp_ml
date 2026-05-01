@@ -98,7 +98,7 @@ O notebook completo pode ser executado diretamente no Google Colab:
 
 [Abrir no Google Colab](https://colab.research.google.com/drive/1bnkEAvfBIKebTpPcRX02qxdWVCu3CYT1?usp=sharing)
 
-# Salary Prediction — Tech Professionals 💻
+# Salary Prediction — Tech Professionals
 
 A machine learning project that predicts which salary bracket a tech professional falls into, based on their profile, experience, programming languages, and learning background.
 
