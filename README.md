@@ -1,8 +1,8 @@
-# Salary Prediction — Tech Professionals
+# Salary Prediction: Tech Professionals
 
-A machine learning project that predicts which salary bracket a tech professional falls into, based on their profile, experience, programming languages, and learning background.
+A machine learning project that predicts which salary bracket a tech professional falls into, based on their profile, experience, programming languages, and learning background. This project is less about the target role itself and more about a habit I try to bring to any technical work: not trusting a model, or a system, just because it runs, but validating it against clear thresholds before calling it done. The same automated PyTest suite that checks this model's accuracy and F1-score is the kind of quality gate I'd want in place before telling a user a fix actually works.
 
-The model was trained on ~23,000 responses from the Kaggle ML & Data Science Survey 2022, covering professionals from over 50 countries. Geography was included as a deliberate feature — the same technical profile can mean very different salaries depending on region, and ignoring that would make the model both inaccurate and unfair.
+The model was trained on ~23,000 responses from the Kaggle ML & Data Science Survey 2022, covering professionals from over 50 countries. Geography was included as a deliberate feature: the same technical profile can mean very different salaries depending on region, and ignoring that would make the model both inaccurate and unfair.
 
 ---
 
@@ -16,15 +16,15 @@ The frontend lets you fill in your profile and get an instant salary bracket pre
 
 ## Problem
 
-> Given a tech professional's education, technical skills, learning background, and region — can we predict which salary bracket they fall into?
+> Given a tech professional's education, technical skills, learning background, and region, can we predict which salary bracket they fall into?
 
-**Target variable** — annual salary grouped into 3 classes:
+**Target variable**: annual salary grouped into 3 classes:
 
-| Class | Annual salary |
-|-------|--------------|
-| Low | Up to $29,999 |
-| Mid | $30,000 – $99,999 |
-| High | $100,000+ |
+| Class | Annual salary     |
+| ----- | ----------------- |
+| Low   | Up to $29,999     |
+| Mid   | $30,000 – $99,999 |
+| High  | $100,000+         |
 
 ---
 
@@ -32,12 +32,12 @@ The frontend lets you fill in your profile and get an instant salary bracket pre
 
 Four algorithms were trained, tuned with GridSearchCV, and evaluated on a held-out test set:
 
-| Algorithm | Cross-val accuracy | Test accuracy |
-|-----------|-------------------|---------------|
-| Decision Tree | 68.5% | **68.1%** |
-| SVM | 64.4% | 63.7% |
-| KNN | 60.9% | 60.9% |
-| Naive Bayes | 57.4% | 55.9% |
+| Algorithm     | Cross-val accuracy | Test accuracy |
+| ------------- | ------------------ | ------------- |
+| Decision Tree | 68.5%              | **68.1%**     |
+| SVM           | 64.4%              | 63.7%         |
+| KNN           | 60.9%              | 60.9%         |
+| Naive Bayes   | 57.4%              | 55.9%         |
 
 The winning model was the **Decision Tree** with 68.1% test accuracy.
 
@@ -53,12 +53,12 @@ The winning model was the **Decision Tree** with 68.1% test accuracy.
 
 ## Tech Stack
 
-- **Python 3** — data processing and model training
-- **Scikit-learn** — classification algorithms, GridSearchCV, train/test split
-- **Pandas / NumPy** — data wrangling
-- **Flask** — prediction API
-- **PyTest** — automated model performance tests
-- **HTML / CSS / JavaScript** — frontend interface
+- **Python 3** - data processing and model training
+- **Scikit-learn** - classification algorithms, GridSearchCV, train/test split
+- **Pandas / NumPy** - data wrangling
+- **Flask** - prediction API
+- **PyTest** - automated model performance tests
+- **HTML / CSS / JavaScript** - frontend interface
 
 ---
 
@@ -70,7 +70,7 @@ The winning model was the **Decision Tree** with 68.1% test accuracy.
     │   ├── modelo.pkl          # Trained model
     │   ├── requirements.txt
     │   └── tests/
-    │       └── test_modelo.py  # PyTest — accuracy and F1 ≥ 60%
+    │       └── test_modelo.py  # PyTest, accuracy and F1 >= 60%
     ├── frontend/
     │   ├── index.html
     │   ├── style.css
@@ -112,13 +112,13 @@ pytest tests/test_modelo.py -v
 
 The test suite validates two minimum performance thresholds against the original dataset:
 
-- Accuracy ≥ 60%
-- F1-score ≥ 60%
+- Accuracy >= 60%
+- F1-score >= 60%
 
 ---
 
 ## Notebook
 
-Full analysis — data exploration, preprocessing, model training and comparison — available on Google Colab:
+Full analysis, data exploration, preprocessing, model training and comparison, available on Google Colab:
 
 [Open in Google Colab](https://colab.research.google.com/drive/1bnkEAvfBIKebTpPcRX02qxdWVCu3CYT1?usp=sharing)
